@@ -1,5 +1,5 @@
 #
-# system.prop for giraffe
+# system.prop for h30u10
 #
 
 # TimeZone set
@@ -54,7 +54,7 @@ ro.crypto.state=unencrypted
 # Wireless Networks
 wifi.supplicant_scan_interval=15
 wifi.interface=wlan0
-ro.hardware=giraffe
+ro.hardware=h30u10
 ro.mediatek.wlan.wsc=1
 ro.mediatek.wlan.p2p=1
 mediatek.wlan.ctia=0

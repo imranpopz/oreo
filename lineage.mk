@@ -5,25 +5,25 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Call device specific makefile
-$(call inherit-product, device/highscreen/giraffe/lineage_giraffe.mk)
+$(call inherit-product, device/huawei/h30u10/lineage_h30u10.mk)
 
-LOCAL_PATH := device/highscreen/giraffe
+LOCAL_PATH := device/huawei/h30u10
 
 # Common CM stuff
-CM_BUILD := giraffe
+CM_BUILD := h30u10
 
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_giraffe
-PRODUCT_DEVICE := giraffe
-PRODUCT_BRAND := Highscreen
+PRODUCT_NAME := lineage_h30u10
+PRODUCT_DEVICE := h30u10
+PRODUCT_BRAND := Huawei
 PRODUCT_MANUFACTURER := Mediatek
-PRODUCT_MODEL := Zera F
+PRODUCT_MODEL := Huawei H30-U10
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
 
 # Release name
-PRODUCT_RELEASE_NAME := Zera F
+PRODUCT_RELEASE_NAME := Huawei H30-U10

@@ -1,6 +1,6 @@
-# giraffe storage specific rc file.
+# h30u10 storage specific rc file.
 
-import /init.giraffe_common.rc
+import /init.h30u10_common.rc
 
 on init
     symlink /sdcard /storage/sdcard0

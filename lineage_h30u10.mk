@@ -12,13 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := device/highscreen/giraffe
+LOCAL_PATH := device/huawei/h30u10
 
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 DEVICE_PACKAGE_OVERLAYS := \
-    device/highscreen/giraffe/overlay
+    device/huawei/h30u10/overlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -49,7 +49,7 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
-     device/highscreen/giraffe/rootdir/system/etc/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml
+     device/huawei/h30u10/rootdir/system/etc/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml
 
 PRODUCT_PACKAGES += \
     gps.mt6582
@@ -67,33 +67,33 @@ PRODUCT_COPY_FILES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-     device/highscreen/giraffe/rootdir/system/etc/thermal/thermal.conf:system/etc/.tp/thermal.conf \
-     device/highscreen/giraffe/rootdir/system/etc/thermal/.ht120.mtc:system/etc/.tp/.ht120.mtc \
-     device/highscreen/giraffe/rootdir/system/etc/thermal/thermal.off.conf:system/etc/.tp/thermal.off.conf
+     device/huawei/h30u10/rootdir/system/etc/thermal/thermal.conf:system/etc/.tp/thermal.conf \
+     device/huawei/h30u10/rootdir/system/etc/thermal/.ht120.mtc:system/etc/.tp/.ht120.mtc \
+     device/huawei/h30u10/rootdir/system/etc/thermal/thermal.off.conf:system/etc/.tp/thermal.off.conf
 
 # Keylayout
 PRODUCT_COPY_FILES += \
-    device/highscreen/giraffe/rootdir/system/usr/keylayout/mtk-kpd.kl:system/usr/keylayout/mtk-kpd.kl
+    device/huawei/h30u10/rootdir/system/usr/keylayout/mtk-kpd.kl:system/usr/keylayout/mtk-kpd.kl
 
 # Hostapd
 PRODUCT_COPY_FILES += \
-    device/highscreen/giraffe/rootdir/system/etc/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
-    device/highscreen/giraffe/rootdir/system/etc/hostapd/hostapd.accept:system/etc/hostapd/hostapd.accept \
-    device/highscreen/giraffe/rootdir/system/etc/hostapd/hostapd.deny:system/etc/hostapd/hostapd.deny
+    device/huawei/h30u10/rootdir/system/etc/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
+    device/huawei/h30u10/rootdir/system/etc/hostapd/hostapd.accept:system/etc/hostapd/hostapd.accept \
+    device/huawei/h30u10/rootdir/system/etc/hostapd/hostapd.deny:system/etc/hostapd/hostapd.deny
 	
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 # RAMDISK
 PRODUCT_COPY_FILES += \
-    device/highscreen/giraffe/rootdir/root/init.giraffe_common.rc:root/init.giraffe_common.rc \
-    device/highscreen/giraffe/rootdir/root/sbin/multi_init:root/sbin/multi_init \
-    device/highscreen/giraffe/rootdir/root/init.protect.rc:root/init.protect.rc \
-    device/highscreen/giraffe/rootdir/root/fstab.giraffe:root/fstab.giraffe \
-    device/highscreen/giraffe/rootdir/root/init.modem.rc:root/init.modem.rc \
-    device/highscreen/giraffe/rootdir/root/factory_init.rc:root/factory_init.rc \
-    device/highscreen/giraffe/rootdir/root/ueventd.giraffe.rc:root/ueventd.giraffe.rc \
-    device/highscreen/giraffe/rootdir/root/init.giraffe.usb.rc:root/init.giraffe.usb.rc \
-    device/highscreen/giraffe/rootdir/root/init.giraffe.rc:root/init.giraffe.rc 
+    device/huawei/h30u10/rootdir/root/init.h30u10_common.rc:root/init.h30u10_common.rc \
+    device/huawei/h30u10/rootdir/root/sbin/multi_init:root/sbin/multi_init \
+    device/huawei/h30u10/rootdir/root/init.protect.rc:root/init.protect.rc \
+    device/huawei/h30u10/rootdir/root/fstab.h30u10:root/fstab.h30u10 \
+    device/huawei/h30u10/rootdir/root/init.modem.rc:root/init.modem.rc \
+    device/huawei/h30u10/rootdir/root/factory_init.rc:root/factory_init.rc \
+    device/huawei/h30u10/rootdir/root/ueventd.h30u10.rc:root/ueventd.h30u10.rc \
+    device/huawei/h30u10/rootdir/root/init.h30u10.usb.rc:root/init.h30u10.usb.rc \
+    device/huawei/h30u10/rootdir/root/init.h30u10.rc:root/init.h30u10.rc 
 
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -180,7 +180,7 @@ PRODUCT_PACKAGES += \
 #PRODUCT_PACKAGES += \
 #    android.hardware.sensors@1.0-impl \
 #    android.hardware.sensors@1.0-service \
-#    sensors.giraffe
+#    sensors.h30u10
 
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/_hals.conf:system/vendor/etc/sensors/_hals.conf
@@ -189,7 +189,7 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, build/target/product/go_defaults.mk)
 
 # call the proprietary setup
-$(call inherit-product, vendor/highscreen/giraffe/giraffe-vendor.mk)
+$(call inherit-product, vendor/huawei/h30u10/h30u10-vendor.mk)
 
 PRODUCT_PACKAGES += \
     charger \

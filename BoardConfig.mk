@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-LOCAL_PATH := device/highscreen/giraffe
+LOCAL_PATH := device/huawei/h30u10
 
 # Board
 TARGET_BOARD_PLATFORM := mt6582
@@ -42,16 +42,16 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 # kernel stuff
 #BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/tools/bootimg.mk
 MTK_PLATFORM := mt6582
-MTK_PROJECT := giraffe
-TARGET_KERNEL_SOURCE := kernel/mediatek/giraffe
-TARGET_KERNEL_CONFIG := zera_defconfig
+MTK_PROJECT := h30u10
+TARGET_KERNEL_SOURCE := kernel/huawei/h30u10
+TARGET_KERNEL_CONFIG := h30u10_defconfig
 BOARD_KERNEL_CMDLINE :=
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 #KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
 #KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
-#TARGET_PREBUILT_KERNEL := device/highscreen/giraffe/kernel
+#TARGET_PREBUILT_KERNEL := device/huawei/h30u10/kernel
 BOARD_KERNEL_IMAGE_NAME := zImage
 
 # Fstab for TWRP
@@ -132,7 +132,7 @@ USE_CAMERA_STUB := true
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
-    device/highscreen/giraffe/sepolicy
+    device/huawei/h30u10/sepolicy
 
 # Symbols
 LINKER_FORCED_SHIM_LIBS := /system/lib/libcam_utils.so|libshim_atomic.so
