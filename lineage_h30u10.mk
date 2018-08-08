@@ -177,10 +177,10 @@ PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
 
 # Sensors
-#PRODUCT_PACKAGES += \
-#    android.hardware.sensors@1.0-impl \
-#    android.hardware.sensors@1.0-service \
-#    sensors.h30u10
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service \
+    sensors.h30u10
 
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/_hals.conf:system/vendor/etc/sensors/_hals.conf
