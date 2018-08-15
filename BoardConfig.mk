@@ -40,7 +40,7 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # kernel stuff
-#BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/tools/bootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/tools/bootimg.mk
 MTK_PLATFORM := mt6582
 MTK_PROJECT := h30u10
 TARGET_KERNEL_SOURCE := kernel/huawei/h30u10
@@ -132,8 +132,8 @@ TARGET_USERIMAGES_USE_EXT4:=true
 USE_CAMERA_STUB := true
 
 # SELinux
-BOARD_SEPOLICY_DIRS += \
-    device/huawei/h30u10/sepolicy
+#BOARD_SEPOLICY_DIRS += \
+#    device/huawei/h30u10/sepolicy
 
 # Symbols
 LINKER_FORCED_SHIM_LIBS := /system/lib/libcam_utils.so|libshim_atomic.so
