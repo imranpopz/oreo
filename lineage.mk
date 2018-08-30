@@ -27,3 +27,6 @@ TARGET_SCREEN_WIDTH := 480
 
 # Release name
 PRODUCT_RELEASE_NAME := Huawei H30-U10
+
+# Root options
+WITH_SU=true

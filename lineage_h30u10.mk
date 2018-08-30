@@ -184,7 +184,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service \
-    sensors.mt6582
+    sensors.h30u10
 
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/_hals.conf:system/vendor/etc/sensors/_hals.conf
