@@ -1,3 +1,4 @@
+
 # Copyright (C) 2013 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -134,10 +135,10 @@ PRODUCT_PACKAGES += \
 	Snap
 
 #PRODUCT_PACKAGES += \
-#    camera.device@1.0-impl \
-#    camera.device@3.2-impl \
-#    android.hardware.camera.provider@2.4-impl \
-#    android.hardware.camera.provider@2.4-service
+    camera.device@1.0-impl-legacy \
+    camera.device@3.2-impl \
+    android.hardware.camera.provider@2.4-impl-legacy \
+    android.hardware.camera.provider@2.4-service
 
 # Wifi
 PRODUCT_PACKAGES += \
@@ -223,12 +224,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/manifest.xml:system/vendor/manifest.xml
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/seccomp_policy/mediacodec.policy:system/vendor/etc/seccomp_policy/mediacodec.policy
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
 	ro.crypto.state=unencrypted \
 	ro.mount.fs=EXT4 \
 	ro.secure=0 \
 	ro.adb.secure=0 \
-	ro.allow.mock.location=1 \
+	ro.allow.mock.location=0 \
 	ro.debuggable=1 \
 	persist.sys.usb.config = mtp,adb \
 	persist.service.adb.enable=1 \
