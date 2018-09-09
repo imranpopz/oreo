@@ -136,7 +136,7 @@ USE_CAMERA_STUB := true
 #    device/huawei/h30u10/sepolicy
 
 # Symbols
-LINKER_FORCED_SHIM_LIBS := /system/lib/libcam_utils.so|libshim_atomic.so
+LINKER_FORCED_SHIM_LIBS := /system/lib/libcam_utils.so|libshim_camera.so
 LINKER_FORCED_SHIM_LIBS += /system/lib/librilmtk.so|libshim_ril.so
 
 # Hack for build

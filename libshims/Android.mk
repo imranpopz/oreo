@@ -11,7 +11,7 @@ include $(BUILD_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 # /system/lib/libcam.utils.so ( _ZN7android13GraphicBufferC1Ejjij )
 LOCAL_SRC_FILES := GraphicBuffer.cpp
-LOCAL_SHARED_LIBRARIES := libui
+LOCAL_SHARED_LIBRARIES := libgui libutils liblog libbinder libandroid libui
 LOCAL_MODULE := libshim_camera
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_SHARED_LIBRARY)
