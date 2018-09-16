@@ -135,6 +135,10 @@ PRODUCT_PACKAGES += \
 	Snap
 
 PRODUCT_PACKAGES += \
+<<<<<<< HEAD
+=======
+	libcam.client \
+>>>>>>> 0de73f41d8cb2cb1efc95742ac1a4c60e0eff3ad
     camera.device@1.0-impl \
     camera.device@3.2-impl \
     android.hardware.camera.provider@2.4-impl \
