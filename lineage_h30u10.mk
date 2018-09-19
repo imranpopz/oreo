@@ -132,10 +132,10 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-	Snap
+    Snap
 
 PRODUCT_PACKAGES += \
-	libcam.client \
+    libcam.client \
     camera.device@1.0-impl \
     camera.device@3.2-impl \
     android.hardware.camera.provider@2.4-impl \
@@ -219,8 +219,13 @@ PRODUCT_PACKAGES += \
     libshim_camera \
     libshim_bionic \
     libshim_atomic \
+    libshim_sensor \
     libxlog
-    
+
+# MTK Helpers
+#PRODUCT_PACKAGES += \
+#    libcam.client
+
 # Vendor Interface Manifest
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/manifest.xml:system/vendor/manifest.xml
@@ -239,6 +244,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
 	persist.service.adb.enable=1 \
 	persist.service.debuggable=1 \
 	ro.zygote=zygote32 \
+	persist.media.treble_omx=false \
 	camera.disable_zsl_mode=1 \
 	dalvik.vm.dex2oat-Xms=64m \
 	dalvik.vm.dex2oat-Xmx=512m \

@@ -130,6 +130,7 @@ BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril/
 
 TARGET_USERIMAGES_USE_EXT4:=true
 USE_CAMERA_STUB := true
+USE_MTK_CAMERA_WRAPPER := true
 TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY := libcamera_parameters_mtk
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
@@ -138,8 +139,10 @@ TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 #    device/huawei/h30u10/sepolicy
 
 # Symbols
-LINKER_FORCED_SHIM_LIBS := /system/lib/libcam_utils.so|libshim_camera.so
-LINKER_FORCED_SHIM_LIBS += /system/lib/librilmtk.so|libshim_ril.so
+TARGET_LD_SHIM_LIBS := \
+	/system/lib/libcam_utils.so|libshim_camera.so \
+	/system/lib/librilmtk.so|libshim_ril.so \
+	/system/lib/libshim_sensor.so
 
 # Hack for build
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
