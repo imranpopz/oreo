@@ -130,12 +130,9 @@ BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril/
 
 TARGET_USERIMAGES_USE_EXT4:=true
 USE_CAMERA_STUB := true
-<<<<<<< HEAD
 USE_MTK_CAMERA_WRAPPER := true
-=======
 TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY := libcamera_parameters_mtk
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
->>>>>>> 0de73f41d8cb2cb1efc95742ac1a4c60e0eff3ad
 
 # SELinux
 #BOARD_SEPOLICY_DIRS += \
