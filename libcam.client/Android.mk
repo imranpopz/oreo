@@ -11,7 +11,7 @@ LOCAL_C_INCLUDES := \
     $(TOP)/system/media/camera/include
 
 LOCAL_SHARED_LIBRARIES := liblog libutils libcutils libdl \
-			  libcam1client libcam_utils
+			  libcam_utils
 
 LOCAL_MODULE := libcam.client
 LOCAL_MODULE_TAGS := optional
