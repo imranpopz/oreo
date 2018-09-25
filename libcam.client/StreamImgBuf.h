@@ -40,7 +40,7 @@
 //
 //#include <utils/RefBase.h>
 //#include <utils/String8.h>
-//#include <system/window.h>
+#include <nativebase/nativebase.h>
 #include "IBuffer.h"
 
 using namespace android::MtkCamUtils;

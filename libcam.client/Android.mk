@@ -8,7 +8,8 @@ LOCAL_SRC_FILES := \
     StreamImgBuf.cpp \
 
 LOCAL_C_INCLUDES := \
-    $(TOP)/system/media/camera/include
+    $(TOP)/system/media/camera/include \
+$(TOP)/frameworks/native/libs/nativebase/include
 
 LOCAL_SHARED_LIBRARIES := liblog libutils libcutils libdl \
 			  libcam_utils
