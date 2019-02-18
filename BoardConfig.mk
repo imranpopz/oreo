@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 LOCAL_PATH := device/huawei/h30u10
-
+TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 # Board
 TARGET_BOARD_PLATFORM := mt6582
 MTK_BOARD_PLATFORMS := mt6582
@@ -38,9 +38,13 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE:=2725773312
 BOARD_CACHEIMAGE_PARTITION_SIZE:=132120576
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
+# MTK Hardware
+BOARD_USES_MTK_HARDWARE := true
+BOARD_HAS_MTK_HARDWARE := true
+MTK_HARDWARE := true
 
 # kernel stuff
-BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/tools/bootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/huawei/h30u10/tools/bootimg.mk
 MTK_PLATFORM := mt6582
 MTK_PROJECT := h30u10
 TARGET_KERNEL_SOURCE := kernel/huawei/h30u10
@@ -106,10 +110,6 @@ USE_NINJA := true
 # Malloc
 MALLOC_SVELTE := true
 
-#Mediatek flags
-BOARD_HAS_MTK_HARDWARE := true
-MTK_HARDWARE := true
-
 # FRAMEWORK WITH OUT SYNC
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 
@@ -126,8 +126,11 @@ TARGET_HAS_EARLYSUSPEND := true
 SIM_COUNT := 2
 
 # RIL
-BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril/
+BOARD_PROVIDES_RILD := true
+BOARD_PROVIDES_LIBRIL := true
+BOARD_CONNECTIVITY_MODULE := conn_soc
 
+#camera
 TARGET_USERIMAGES_USE_EXT4:=true
 USE_CAMERA_STUB := true
 
@@ -141,3 +144,5 @@ LINKER_FORCED_SHIM_LIBS += /system/lib/librilmtk.so|libshim_ril.so
 
 # Hack for build
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
+
+
