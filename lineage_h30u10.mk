@@ -213,12 +213,8 @@ PRODUCT_PACKAGES += \
     libcurl
 
 PRODUCT_PACKAGES += \
-    libshim_ril \
-    libshim_camera \
-    libshim_bionic \
-    libshim_atomic \
-    libxlog
-    
+    libshim
+
 # Vendor Interface Manifest
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/manifest.xml:system/vendor/manifest.xml
